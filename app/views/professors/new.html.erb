@@ -1,0 +1,25 @@
+<%= error_messages_for 'professor', :header_message => 'Please correct the following errors and try again' %>
+Please enter the Lecturer details
+<div>
+  <%= link_to @college.name, {:controller => "colleges", :action => "show", :id => @college.id} %>
+</div>
+<% form_for(@professor) do |f| %>
+  <p>
+    <%= f.label :firstName, "First Name*" %><br />
+    <%= f.text_field :firstName, :class => 'textbox', :maxlength => 25 %>
+  </p>
+  <p>
+    <%= f.label :lastName, "Surname" %><br />
+    <%= f.text_field :lastName, :class => 'textbox', :maxlength => 25  %>
+  </p>
+  <p>
+    <%= f.label :department, "Department*" %><br />
+    <%= f.text_field :department, :class => 'textbox', :maxlength => 25  %>
+  </p>
+  <input type="hidden" name="college_id" value="<%=  @college.id  %>" />
+  <%= show_simple_captcha %>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+<%= set_focus_to_id 'professor_firstName' %>

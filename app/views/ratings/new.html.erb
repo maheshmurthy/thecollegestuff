@@ -1,0 +1,73 @@
+<% form_tag ({:action => "create"}) do %>
+  <% (0..3).each { |i| %>
+    <div class="ratings">
+      <div class="ratingsHeading">
+        <%= getHeading(i) %>
+      </div>
+      <div class="radiogroup">
+          <div class="qgroup">
+          <span class="question">
+          <%= getQuestion(i,1) %>
+          </span>
+          <span class="answer">
+          <%= radio_button_tag 'q'+i.to_s, "1" %>
+          </span>
+          </div>
+
+          <div class="qgroup">
+          <span class="question">
+          <%= getQuestion(i,2) %>
+          </span>
+          <span class="answer">
+          <%= radio_button_tag 'q'+i.to_s, "2" %>
+          </span>
+          </div>
+
+          <div class="qgroup">
+          <span class="question">
+          <%= getQuestion(i,3) %>
+          </span>
+          <span class="answer">
+          <%= radio_button_tag 'q'+i.to_s, "3", :checked => true %>
+          </span>
+          </div>
+
+          <div class="qgroup">
+          <span class="question">
+          <%= getQuestion(i,4) %>
+          </span>
+          <span class="answer">
+          <%= radio_button_tag 'q'+i.to_s, "4" %>
+          </span>
+          </div>
+
+          <div class="qgroup">
+          <span class="question">
+          <%= getQuestion(i,5) %>
+          </span>
+          <span class="answer">
+          <%= radio_button_tag 'q'+i.to_s, "5" %>
+          </span>
+          </div>
+      </div>
+    </div>
+  <% } %>
+
+    <div class="ratings">
+      <div class="ratingsHeading">
+        <%= getHeading(4) %>
+      </div>
+
+      <div class="radiogroup">
+        <%= text_area_tag :comments, nil, {:size => "50x5"} %> 
+      </div>
+        <%= show_simple_captcha %>
+        <% if logged_in? %>
+        Do not display my name across the rating 
+        <%= check_box_tag 'showname', 'true', false %>
+        <% end %>
+        <div style="padding-top: 10px; padding-left: 80px;">
+        <%= submit_tag 'Rate now!' %>
+        </div>
+    </div>
+<% end %>

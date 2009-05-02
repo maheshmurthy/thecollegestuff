@@ -1,0 +1,30 @@
+<div id="collegepage">
+
+  <div id="addprof">
+  <%= link_to 'Add Professor!', {:controller => "professors", :action => "new", :id => @college} %>
+  </div>
+  <div id="collegeinfo">
+  <li class="collegename">
+    <%= @college.name %>
+  </li>
+  <li> 
+    <%= @college.city%>
+  </li>
+  <li>
+    <%= @college.state%>
+  </li>
+  </div>
+  <% unless @professorList.nil? || @professorList.empty? %>
+  <div class="ordinarylist">
+    <%  for professor in @professorList %>
+          <% name = professor.firstName + " " + professor.lastName %>
+          <li>    
+          <%= link_to name, {:controller => "professors", :action => "show", :id => professor.id} %>,
+          <span style="font-size: 15px; padding-left: 10px; color: #666666">
+          <%= professor.department %>
+          </span>
+          </li>
+      <% end %>
+  </div>
+  <% end %>
+</div>

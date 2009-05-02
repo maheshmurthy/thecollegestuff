@@ -1,0 +1,81 @@
+<div id="addprof">
+  <%= link_to "Rate now!", {:controller => 'ratings', :action => :new, :id => @professor} %>
+</div>
+
+<div id="professorinfo">
+  <li class="profname">
+    <%= @professor.firstName %> <%= @professor.lastName %>
+  </li>
+  <li>
+  <%= @professor.department %>
+  </li>
+
+  <li>
+  <% rating = avgRating(@ratings) 
+      if rating != 0 %>
+      Overall Rating <%= rating %>
+      <% end %>
+  </li>
+</div>
+
+    <% unless @ratings.empty? %>
+<div class="bigtext">Student Ratings</div>
+
+<div id="ratingpage">
+    <div class="ratinghead">
+    <span class="ratinglistinfo">
+        <li title="Communication Skills">C</li>
+        <li title="Knowledge">K</li>
+        <li title="Helpful">H</li>
+        <li title="Syllabus coverage">S</li>
+    </span>
+    </div>
+  <% @ratings.nil? || 
+    for profRating in @ratings %>
+    <div class="created">
+      <span class="rating">
+        <%=h niceFormat(profRating.created_at) %>
+      </span>
+      <span class="rating">
+      <li>
+        <%=h profRating.q1 %>
+      </li>
+      <li>
+      <%=h profRating.q2 %>
+      </li>
+      <li>
+      <%=h profRating.q3 %>
+      </li>
+      <li>
+      <%=h profRating.q4 %>
+      </li>
+      </span>
+      <span class="rating">
+        <%= if profRating.showname? 
+              profRating.login
+            else
+              "Anonymous"
+         end %>
+      </span>
+
+
+  </div>
+    <div class="comments">
+      <%= unless profRating.pending 
+            profRating.comments 
+          else
+                "* Under review *"
+          end
+      %>
+    </div>
+  <% end %>
+  <%= unless @ratings.nil? 
+          will_paginate @ratings
+        end
+    %>
+
+  <% else %>
+    <div class="textinfo">Be the first to rate this professor!</div>
+  <%  end %>
+
+</div>

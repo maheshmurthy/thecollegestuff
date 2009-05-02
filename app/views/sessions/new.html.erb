@@ -1,0 +1,14 @@
+<div id="loginpage">
+<% form_tag session_path do -%>
+<p><label for="login">Login</label><br/>
+<%= text_field_tag 'login', '', :class => 'textbox',:tabindex => "1"  %></p>
+
+<p><label for="password">Password <%= link_to '(Forgot Password)', forgot_password_url, {:style => 'text-decoration: none; color: blue;'} %></label><br/>
+<%= password_field_tag 'password','', :class => 'textbox',:tabindex => "2" %></p>
+
+
+<p><%= submit_tag 'Log in', :tabindex => "3" %></p>
+<% end -%>
+<%= set_focus_to_id 'login' %>
+New user? <%= link_to 'Signup now!', :controller => 'users', :action => 'new'%>
+</div>

@@ -1,0 +1,18 @@
+<div class="bigtext">College Listing</div>
+<div class="browse">
+<% for college in @colleges %>
+  <li>
+  <%= link_to college.name, {:controller => "colleges", :action => "show", :id => college.id } %>
+    ,
+    <span style="color:#666666;font-size:16px">
+    <%= college.city %>
+    </span>
+  </li>
+<% end %>
+<div id="pages" style="padding-left:20px; padding-top: 15px;">
+  <%= unless @colleges.nil? 
+          will_paginate @colleges
+        end
+    %>
+</div>
+</div>

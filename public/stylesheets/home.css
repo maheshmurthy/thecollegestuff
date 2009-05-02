@@ -1,0 +1,420 @@
+#page-container {
+    width: 1000px;
+    margin: auto;
+    background-color: white;
+    clear: both;
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    background-color: #336699;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    width: 950px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    min-height: 600px; 
+}
+
+#footer {
+   margin: auto;
+   text-align: center;
+   clear: both;
+   bottom: 0;
+   background-color: #336699;
+   color: white;
+   width: 100%;
+}
+
+.notice {
+   color: white; 
+   background-color: #F3A348;
+   text-align: center;
+   width: 500px;
+//   color: black; 
+//   background-color: white;
+}
+
+#logo {
+    height: 100px;
+    background-image: url("../images/logo.gif");
+    background-repeat: no-repeat;
+}
+
+#menubar {
+    height: 20px;
+    float: right;
+}
+
+
+#menubar li {
+  color : white;
+  padding-right: 5px;
+  display: inline;
+  list-style-type: none;
+  float: right;  
+}
+
+#menubar li a:visited, #menubar li a:link {
+    color : white;
+    text-decoration: none;
+    border-right: 1px solid white;
+    padding-right: 5px;
+}
+
+#header {
+    height: 100px;
+    background-color: #336699;
+}
+
+#normallink a:visited, a:link {
+    color: #336699;
+}
+
+#addprof {
+    background-repeat: no-repeat;
+    background-image: url(../images/addprof.jpg);
+    height: 40px;
+    padding-left: 50px;
+    padding-top: 10px;
+    margin-top: 40px;
+    width: 500px;
+    float: right;
+}
+
+#addprof a:visited, #addprof a:link {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    font-style: italic;
+}
+
+.searchsubmit {
+    text-align: center;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+.textbox {
+    width: 267px;
+    height: 27px;
+    font-size: 20px;
+    padding: 3px 4px 4px 12px; 
+}
+
+.collegelist {
+    font-size: 20px;
+}
+
+#collegepage, #professorpage {
+    padding-left: 30px;
+}
+
+#collegeinfo {
+    margin-right: 500px;
+}
+
+#collegeinfo li, #professorinfo li {
+    list-style: none;
+}
+
+.collegename {
+    font-size: 20px;
+    width: 310px;
+}
+
+.profname {
+    font-size: 30px;
+    width: 310px;
+}
+
+#collegeinfo, #professorinfo {
+    width: 330px;
+    height: 100px;
+    background-image: url(../images/college.jpg);
+    background-repeat: no-repeat;
+    padding-left: 30px; 
+    padding-bottom: 15px;
+    padding-top: 20px;
+    color: white;
+}
+
+#ratelink {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#ratelink a:visited, a:link {
+    color: #336699;
+}
+
+.ratingSection {
+    padding-bottom: 20px;
+}
+
+.toplist {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-style: solid;
+    border-color: #336699;
+}
+
+#search .ordinarylist {
+    border: none;
+}
+
+#search .ordinarylist li {
+    width: 400px;
+}
+
+#collegepage .ordinarylist li {
+    border-bottom: 1px solid #336699;
+}
+
+.ordinarylist {
+    padding-top: 10px;
+}
+
+.ordinarylist {
+    border-left: 23px solid #336699;
+    border-top: 1px solid #336699;
+    border-bottom: 1px solid #336699;
+    border-right: 23px solid #336699;
+    width: 500px;
+}
+
+.ordinarylist li {
+    padding-left: 95px;
+    padding-top: 18px;
+    font-size: 20px;
+}
+
+.ordinarylist li, .toplist li {
+    list-style: none;
+    padding-bottom: 5px;
+}
+
+.toplist li {
+    padding-left: 10px;
+}
+
+.ordinarylist li a:hover, .toplist li a:hover {
+    text-decoration: none;
+    background-color: #336699;
+    color: white;
+}
+
+.ordinarylist a:link, .toplist a:link {
+    text-decoration: none;
+    color: #336699;
+}
+
+.ordinarylist a:visited, .toplist a:visited {
+    text-decoration: none;
+    color: #336699;
+}
+
+.ratingsHeading {
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.ratings {
+    width: 700px;
+    clear: both;
+}
+
+.radiogroup {
+    width: 400px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.question {
+    width: 300px;
+    float: left;
+    color: #666666;
+}
+
+.answer {
+    width: 100px;
+    float: left;
+}
+
+.qgroup {
+    width: 400px;
+}
+
+#search {
+    float: left;
+}
+
+#searchgroup {
+    margin: auto;
+    padding-left: 20px;
+}
+
+#topratings {
+    float: right;
+}
+
+#topratings .heading {
+    font-size: 20px;
+    background-color: #336699;
+    color: white;
+    text-align: center;
+}
+
+.bigtext {
+    font-size: 35px;
+    width: 300px;
+    text-align: center;
+    color: #405E51;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+#ratingpage {
+    margin-left: 30px;
+}
+
+.created {
+    margin-top: 20px; 
+    width: 600px;
+    background-color: #336699;
+    color: white;
+    height: 20px;
+}
+
+.comments {
+    width: 580px;
+    padding-left: 20px;
+    background-color: lightblue;
+    color: #555555;
+    line-height: 21px;
+}
+
+.rating, .ratinglistinfo {
+    width: 190px;
+    float: left;
+}
+
+.rating {
+    margin-left: 10px;
+}
+
+.ratinglistinfo {
+    margin-left: 208px;
+}
+
+.ratinglistinfo li {
+  padding-right: 25px;
+  display: inline;
+  list-style-type: none;
+}
+
+.ratinghead {
+  border-bottom: 2px solid grey;
+  width: 600px;
+}
+
+.rating li {
+  padding-right: 28px;
+  display: inline;
+  list-style-type: none;
+}
+
+#loginpage {
+    border: 20px solid #F3A348;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    width: 320px;
+    margin: auto;
+}
+
+.textinfo {
+    font-size: 22px;
+    color: #F3A348;
+    font-style:italic;
+}
+
+.about {
+    font-size: 30px;    
+    color: #F3A348;
+    padding-bottom: 10px;
+}
+
+.info {
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 50px;
+    color: #666666;
+}
+
+div.auto_complete {
+  width: 350px;
+  background: #fff ;
+}
+
+div.auto_complete ul {
+   border:1px solid #888 ;
+   margin:0;
+   padding:0;
+   width:100%;
+   list-style-type:none;
+}
+
+div.auto_complete ul li {
+   margin:0;
+   padding:3px;
+}
+
+div.auto_complete ul li.selected {
+   background-color: #ffb ;
+}
+
+div.auto_complete ul strong.highlight {
+   color: #800 ;
+   margin:0;
+   padding:0;
+}
+
+
+.browse li {
+    padding-left: 45px;
+    padding-top: 12px;
+    font-size: 20px;
+}
+
+.browse li {
+    list-style: none;
+}
+
+.browse li a:hover {
+    text-decoration: none;
+    background-color: #336699;
+    color: white;
+}
+
+.browse a:link {
+    text-decoration: none;
+    color: #336699;
+}
+
+.browse a:visited {
+    text-decoration: none;
+    color: #336699;
+}
+
+
+

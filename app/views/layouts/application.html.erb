@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">                    
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <%= stylesheet_link_tag "home", :media => "all", :cache => true %>
+  <%= javascript_include_tag :all, :cache => true %>
+</head>
+<body>
+
+<div id="page-container">
+    <div id="header">
+
+        <div id="menubar">
+        <li>
+        <%= if logged_in?
+                link_to 'logout', :controller => 'logout'
+            else 
+                link_to 'login', :controller => 'login'
+            end 
+        %>
+        </li>
+
+        <li>
+        <%= link_to 'about', :controller => 'home', :action => 'about' %>
+        </li>
+        <!--li>
+        <%= link_to_function 'about',
+            "Dialog.alert({url: 'about', options: {method: 'get'}},
+            {className: 'dialog', width: 540, okLabel: 'Close'});" %>
+        </li-->
+        <li>
+        <%= link_to 'home', :controller => 'home', :action => 'index' %>
+        </li>
+
+        <li>
+        <% if logged_in? %>
+        Howdy 
+        <%= user = current_user
+            user.login %>!
+        <% end %>
+        </li>
+
+
+        </div>
+
+        <div id="logo">
+        </div>
+    </div>
+    <div id="content">
+      <%= render :partial => "layouts/#{controller.sub_layout}" %>
+    </div>
+    <div id="footer">All rights reserved</div>
+</div>
+</body>
+</html>

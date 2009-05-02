@@ -1,0 +1,15 @@
+  <div>
+    <span class="rats"><%=h rating_list.q1 %></span>
+    <span class="rats"><%=h rating_list.q2 %></span>
+    <span class="rats"><%=h rating_list.q3 %></span>
+    <span class="rats"><%=h rating_list.q4 %></span>
+    <span class="rats"><%=h rating_list.q5 %></span>
+    <span class="ratsc"><%=h rating_list.comments %></span>
+    <span class="ratm"><%= link_to 'Destroy', rating_list, :confirm => 'Are you sure?', :method => :delete %></span>
+    <span class="ratm">
+      <%= link_to_remote 'approve', :url => {
+        :controller => "ratings",
+        :action => "approve",
+        :id => rating_list.id} ,
+        :update => "ratlist" %></span>
+  </div>

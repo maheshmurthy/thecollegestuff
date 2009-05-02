@@ -1,0 +1,11 @@
+common:
+ root_url: myhost.com
+ photos_max_number: 6
+
+production:
+ root_url: http://thecollegestuff.com
+ from_address: team@thecollegestuff.com
+
+development:
+ root_url: http://beta.mmurthy.com
+ from_address: mahesh@mmurthy.com

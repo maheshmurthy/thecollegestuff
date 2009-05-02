@@ -1,0 +1,11 @@
+<span><%= professor_list.firstName %></span>
+<span><%= professor_list.lastName %></span>
+<span><%= professor_list.department %></span>
+  <span class="ratm"><%= link_to 'Destroy', professor_list, :confirm => 'Are you sure?', :method => :delete %></span>
+    <span class="ratm">
+      <%= link_to_remote 'approve', :url => {
+        :controller => "professors",
+        :action => "approve",
+        :id => professor_list.id} ,
+        :update => "ratlist" %></span>
+

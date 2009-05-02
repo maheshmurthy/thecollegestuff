@@ -1,0 +1,21 @@
+<div class="textinfo">Please enter the College Details</div>
+<%= error_messages_for 'college', :header_message => 'We were unable to add your college', :message => ' Please try again after correcting the errors:' %>
+<% form_for(@college) do |f| %>
+    <p>
+    <%= f.label :name, 'Name*' %><br />
+    <%= f.text_field :name, :class => 'textbox', :maxlength => 50 %>
+    </p>
+    <p>
+    <%= f.label :city, 'City*' %><br />
+    <%= f.text_field :city, :class => 'textbox', :maxlength => 25 %>
+    </p>
+    <p>
+    <%= f.label :state, 'State*' %><br />
+    <%= f.text_field :state, :class => 'textbox' , :maxlength => 25 %>
+    </p>
+    <p>
+    <%= show_simple_captcha %>
+    <%= f.submit "Create" %>
+    </p>
+<% end %>
+<%= set_focus_to_id 'college_name' %>

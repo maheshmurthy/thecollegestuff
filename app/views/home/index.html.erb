@@ -1,0 +1,60 @@
+<div id="search">
+    <div id="searchgroup">
+      <% form_tag({:action => 'index'}, {:method => :get}) do %>
+        <%= text_field_tag 'name', 'Enter college name', :class => 'textbox' %>
+        <img id='search_spinner' src='images/spinner.gif' style='display:none;'/>
+        <div class="auto_complete" id="name_auto_complete"></div>
+        <%= auto_complete_field :name, :url => {:action => 'search'},
+                :indicator => 'search_spinner' %>
+                <%= javascript_tag "Event.observe('name', 'focus', function() {if($('name').value == 'Enter college name') {$('name').clear()}});" %>
+        <br />
+        <%= submit_tag "Search", :class => "searchsubmit" %>
+    <% end %>
+    </div>
+   <% if @colleges.nil? %>
+   <% elsif @colleges.empty?  %>
+    <div class="normallink">
+            Can't find your college?
+    <%= link_to 'Add now!', {:controller => "colleges", :action => "new"} %>
+    </div>
+    <% else %>
+        <div class="ordinarylist">
+        <%= render(:partial => "college_list", :collection => @colleges) %>
+        </div>
+    <% end  %>
+
+    <%= if @colleges.nil? == false 
+          will_paginate @colleges 
+        end
+    %>
+</div>
+<div id="topratings">
+    <div class="ratingSection">
+      <div class="heading">
+      Top Rated Professors
+      </div>
+      <% @names = Professor.all_cached  %>
+
+      <div class="toplist">
+      <%=  render(:partial => "prof_name", :collection => @names) %>
+      </div>
+    </div>
+
+    <div class="ratingSection">
+      <div class="heading">
+        Top Rated Colleges
+      </div>
+      <% names = getTopCollegeList %>
+      <div class="toplist">
+        <%=  render(:partial => "college_name", :collection => names) %>
+      </div>
+    </div>
+
+    <div class="ratingSection">
+      <div class="browse">
+        <li>
+      <%= link_to "Browse all Colleges", {:action => 'all', :controller => 'colleges', :id => 1}, :style => "text-decoration: none;" %>
+      </li>
+    </div>
+    </div>
+</div>

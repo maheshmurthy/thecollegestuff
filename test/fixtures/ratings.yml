@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  collegeId: 
+  professorId: 
+  q1: 
+  q2: 
+  q3: 
+  q4: 
+  q5: 
+  avg: 1.5
+  pending: false
+
+two:
+  collegeId: 
+  professorId: 
+  q1: 
+  q2: 
+  q3: 
+  q4: 
+  q5: 
+  avg: 1.5
+  pending: false

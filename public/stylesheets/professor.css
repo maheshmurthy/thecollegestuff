@@ -1,0 +1,16 @@
+#ratelink {
+    font-size: 20px;
+    padding: 10px;
+}
+
+#created {
+    background-color: #DDDDDD;
+}
+
+#comments {
+    padding-bottom: 10px;
+}
+
+#ratings {
+    padding-right: 50px;
+}

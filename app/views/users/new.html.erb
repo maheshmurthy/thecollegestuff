@@ -1,0 +1,19 @@
+<div id="loginpage">
+  <%= error_messages_for :user, :header_message => 'Please try again', :message => 'We had some problems registering:' %>
+<% form_for :user, :url => users_path do |f| -%>
+<p><label for="login">Login</label><br/>
+<%= f.text_field :login, :class => 'textbox' %></p>
+
+<p><label for="email">Email</label><br/>
+<%= f.text_field :email, :class => 'textbox'  %></p>
+
+<p><label for="password">Password</label><br/>
+<%= f.password_field :password, :class => 'textbox'  %></p>
+
+<p><label for="password_confirmation">Confirm Password</label><br/>
+<%= f.password_field :password_confirmation, :class => 'textbox'  %></p>
+
+<p><%= submit_tag 'Sign up' %></p>
+<% end -%>
+<%= set_focus_to_id 'user_login' %>
+</div>

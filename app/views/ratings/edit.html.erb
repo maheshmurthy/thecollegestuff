@@ -1,0 +1,36 @@
+<h1>Editing rating</h1>
+
+<% form_for(@rating) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :q1 %><br />
+    <%= f.text_field :q1 %>
+  </p>
+  <p>
+    <%= f.label :q2 %><br />
+    <%= f.text_field :q2 %>
+  </p>
+  <p>
+    <%= f.label :q3 %><br />
+    <%= f.text_field :q3 %>
+  </p>
+  <p>
+    <%= f.label :q4 %><br />
+    <%= f.text_field :q4 %>
+  </p>
+  <p>
+    <%= f.label :q5 %><br />
+    <%= f.text_field :q5 %>
+  </p>
+  <p>
+    <%= f.label :pending %><br />
+    <%= f.text_field :pending %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @rating %> |
+<%= link_to 'Back', ratings_path %>
