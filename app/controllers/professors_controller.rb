@@ -32,7 +32,11 @@ class ProfessorsController < ApplicationController
     end
 
     def create
+        logger.info "**********************************************************************"
         @professor = Professor.new(params[:professor])
+        # Department is obtained from ajax from department model and it won't be
+        # populated in professor. So, manually set it.
+        @professor.department = params[:department]
 
         # Capitalize the first character of each string in prof name
         @professor.firstName = @professor.firstName.gsub(/^[a-z]|\s+[a-z]/) { |a| a.upcase }
@@ -42,6 +46,7 @@ class ProfessorsController < ApplicationController
         @professor.college_id = params[:college_id]
         @professor.review = true
         @college = College.find_by_id params[:college_id]
+        logger.info "**********************************************************************"
         respond_to do |format|
             if simple_captcha_valid?
               if @professor.save

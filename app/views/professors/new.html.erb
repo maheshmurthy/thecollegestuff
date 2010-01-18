@@ -14,7 +14,12 @@ Please enter the Lecturer details
   </p>
   <p>
     <%= f.label :department, "Department*" %><br />
-    <%= f.text_field :department, :class => 'textbox', :maxlength => 25  %>
+    <%= text_field_tag 'department', '',:class => 'textbox' %>
+    <img id='search_spinner' src='../../images/spinner.gif' style='display:none;'/>
+    <div class="auto_complete" id="department_auto_complete"></div>
+    <%= auto_complete_field :department, :url => {:controller => 'departments', :action => 'search'},
+                :indicator => 'search_spinner' %>
+
   </p>
   <input type="hidden" name="college_id" value="<%=  @college.id  %>" />
   <%= show_simple_captcha %>

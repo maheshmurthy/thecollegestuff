@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #336699;
+    background-image: url("../images/bg.jpg");
 }
 
 html, body {
@@ -22,6 +22,7 @@ html, body {
     padding-bottom: 10px;
     padding-left: 25px;
     min-height: 600px; 
+    margin-top: 10px;
 }
 
 #footer {
@@ -29,9 +30,10 @@ html, body {
    text-align: center;
    clear: both;
    bottom: 0;
-   background-color: #336699;
-   color: white;
+   color: #043a57;
    width: 100%;
+   height: 50px;  
+   padding-top: 30px;
 }
 
 .notice {
@@ -52,11 +54,12 @@ html, body {
 #menubar {
     height: 20px;
     float: right;
+    color: #043a57;
 }
 
 
 #menubar li {
-  color : white;
+  color: #043a57;
   padding-right: 5px;
   display: inline;
   list-style-type: none;
@@ -64,19 +67,27 @@ html, body {
 }
 
 #menubar li a:visited, #menubar li a:link {
-    color : white;
+    color: #043a57;
     text-decoration: none;
     border-right: 1px solid white;
     padding-right: 5px;
 }
 
 #header {
-    height: 100px;
-    background-color: #336699;
+    /*height: 75px;
+    background-color: #0066cc;
+    color: #043a57;
+    margin: auto;
+    width: 1000px;
+    */
+    background-image: url("../images/header2.jpg");
+    height: 75px;
+    width: 1000px;
+    margin: auto;
 }
 
 #normallink a:visited, a:link {
-    color: #336699;
+    color: #0f86bd;
 }
 
 #addprof {
@@ -155,7 +166,7 @@ h1 {
 }
 
 #ratelink a:visited, a:link {
-    color: #336699;
+    color: #0f86bd;
 }
 
 .ratingSection {
@@ -166,7 +177,7 @@ h1 {
     padding-top: 10px;
     padding-bottom: 20px;
     border-style: solid;
-    border-color: #336699;
+    border-color: #0f86bd;
 }
 
 #search .ordinarylist {
@@ -178,7 +189,7 @@ h1 {
 }
 
 #collegepage .ordinarylist li {
-    border-bottom: 1px solid #336699;
+    border-bottom: 1px solid #0f86bd;
 }
 
 .ordinarylist {
@@ -186,10 +197,10 @@ h1 {
 }
 
 .ordinarylist {
-    border-left: 23px solid #336699;
-    border-top: 1px solid #336699;
-    border-bottom: 1px solid #336699;
-    border-right: 23px solid #336699;
+    border-left: 23px solid #0f86bd;
+    border-top: 1px solid #0f86bd;
+    border-bottom: 6px solid #0f86bd;
+    border-right: 23px solid #0f86bd;
     width: 500px;
 }
 
@@ -210,18 +221,18 @@ h1 {
 
 .ordinarylist li a:hover, .toplist li a:hover {
     text-decoration: none;
-    background-color: #336699;
+    background-color: #0f86bd;
     color: white;
 }
 
 .ordinarylist a:link, .toplist a:link {
     text-decoration: none;
-    color: #336699;
+    color: #0f86bd;
 }
 
 .ordinarylist a:visited, .toplist a:visited {
     text-decoration: none;
-    color: #336699;
+    color: #0f86bd;
 }
 
 .ratingsHeading {
@@ -260,17 +271,18 @@ h1 {
 }
 
 #searchgroup {
-    margin: auto;
-    padding-left: 20px;
+    padding-left: 100px;
+    padding-top: 20px;
 }
 
 #topratings {
     float: right;
+    padding-top: 20px;
 }
 
 #topratings .heading {
     font-size: 20px;
-    background-color: #336699;
+    background-color: #0f86bd;
     color: white;
     text-align: center;
 }
@@ -291,7 +303,7 @@ h1 {
 .created {
     margin-top: 20px; 
     width: 600px;
-    background-color: #336699;
+    background-color: #0f86bd;
     color: white;
     height: 20px;
 }
@@ -402,19 +414,16 @@ div.auto_complete ul strong.highlight {
 
 .browse li a:hover {
     text-decoration: none;
-    background-color: #336699;
+    background-color: #0f86bd;
     color: white;
 }
 
 .browse a:link {
     text-decoration: none;
-    color: #336699;
+    color: #0f86bd;
 }
 
 .browse a:visited {
     text-decoration: none;
-    color: #336699;
+    color: #0f86bd;
 }
-
-
-
