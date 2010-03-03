@@ -39,3 +39,10 @@ RewriteRule ^(.*)$ dispatch.fcgi [QSA,L]
 #   ErrorDocument 500 /500.html
 
 ErrorDocument 500 "<h2>Application error</h2>Rails application failed to start properly"
+
+<ifmodule mod_expires.c>
+    <filesmatch "\.(jpg|gif|png|css|js)$">
+        ExpiresActive on
+        ExpiresDefault "access plus 1 year"
+    </filesmatch>
+</ifmodule>
