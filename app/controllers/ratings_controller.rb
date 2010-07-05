@@ -1,8 +1,5 @@
 class RatingsController < ApplicationController
   
-  cache_sweeper :rating_sweeper,
-                :only => [ :approve,
-                           :create ]
   def sub_layout
     "ratings"
   end
